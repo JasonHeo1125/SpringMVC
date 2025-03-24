@@ -43,4 +43,8 @@ public class UserService {
 
         return jwtUtil.generateToken(id);
     }
+
+    public boolean existsById(String id) {
+        return userRepository.findById(id).isPresent();
+    }
 }
